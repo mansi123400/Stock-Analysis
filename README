@@ -1,0 +1,147 @@
+# 📈 Stock Market Dashboard
+
+A free, real-time stock market dashboard built with **Streamlit**, **yfinance**, and **Plotly**. Supports US, Indian (NSE/BSE), UK stocks, and Crypto — no paid API required.
+
+---
+
+## 🖥️ Demo Preview
+
+> Type any stock ticker (e.g. `AAPL`, `RELIANCE.NS`, `BTC-USD`) and instantly get live charts, technical indicators, and company info with logo.
+
+---
+
+## ✨ Features
+
+- 📊 **Interactive Charts** — Candlestick & Line charts with volume bars
+- 📉 **Technical Indicators** — RSI, MACD, Bollinger Bands, SMA (20 & 50 day)
+- 🏢 **Auto Company Logo** — Fetches real logo for any company automatically
+- 💹 **Key Metrics** — Current Price, Day High, Day Low, Volume
+- 📈 **Returns Analysis** — Daily returns histogram, Sharpe Ratio, Mean & Std Dev
+- 🔀 **Multi-Stock Comparison** — Compare up to 5 stocks on a normalized chart
+- 📥 **CSV Export** — Download historical OHLCV data with one click
+- 🌍 **Global Stock Support** — US, Indian (NSE/BSE), UK, and Crypto markets
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| [Streamlit](https://streamlit.io/) | Web app framework |
+| [yfinance](https://pypi.org/project/yfinance/) | Free Yahoo Finance API |
+| [Plotly](https://plotly.com/) | Interactive charts |
+| [Pandas](https://pandas.pydata.org/) | Data processing & indicators |
+| [Requests](https://pypi.org/project/requests/) | Logo fetching |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+\```bash
+git clone https://github.com/your-username/stock-market-dashboard.git
+cd stock-market-dashboard
+\```
+
+### 2. Install dependencies
+
+\```bash
+pip install streamlit yfinance plotly pandas requests
+\```
+
+### 3. Run the app
+
+\```bash
+streamlit run app.py
+\```
+
+The app will open automatically at `http://localhost:8501`
+
+---
+
+## 📦 Project Structure
+
+\```
+stock-market-dashboard/
+│
+├── app.py               # Main Streamlit application
+├── requirements.txt     # Python dependencies
+└── README.md            # Project documentation
+\```
+
+---
+
+## 🎯 Supported Ticker Formats
+
+| Market | Format | Example |
+|--------|--------|---------|
+| US Stocks | `TICKER` | `AAPL`, `TSLA`, `NVDA` |
+| Indian NSE | `TICKER.NS` | `RELIANCE.NS`, `TCS.NS` |
+| Indian BSE | `TICKER.BO` | `INFY.BO`, `WIPRO.BO` |
+| UK Stocks | `TICKER.L` | `HSBA.L`, `BP.L` |
+| Crypto | `TICKER-USD` | `BTC-USD`, `ETH-USD` |
+
+---
+
+## 📊 Technical Indicators Explained
+
+- **SMA (20 & 50 day)** — Simple Moving Average to identify trends
+- **RSI (14 day)** — Relative Strength Index; above 70 = overbought, below 30 = oversold
+- **MACD** — Moving Average Convergence Divergence for momentum signals
+- **Bollinger Bands** — Volatility bands around the moving average
+- **Sharpe Ratio** — Risk-adjusted return metric (annualized)
+
+---
+
+## 🌐 Logo Fetching — How It Works
+
+The app automatically fetches real company logos using a 3-layer fallback:
+
+1. **Yahoo Finance** — Direct `logo_url` from `yf.Ticker().info`
+2. **Clearbit API** — Free logo API using the company's website domain
+3. **logo.dev** — Ticker-based logo lookup as final fallback
+
+No API key required for any of these sources.
+
+---
+
+## 📋 requirements.txt
+
+\```
+streamlit
+yfinance
+plotly
+pandas
+requests
+\```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+
+- 🐛 Report bugs via [Issues](https://github.com/your-username/stock-market-dashboard/issues)
+- 💡 Suggest new features
+- 🔧 Submit pull requests
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — free to use, modify, and distribute.
+
+---
+
+## 👨‍💻 Author
+
+Built with ❤️ using Python & Streamlit.
+
+> ⭐ If you found this useful, please give it a star on GitHub!
+
+---
+
+## ⚠️ Disclaimer
+
+This app is for **educational and informational purposes only**. It is not financial advice. Always do your own research before making investment decisions.
